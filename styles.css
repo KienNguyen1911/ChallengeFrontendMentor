@@ -129,6 +129,12 @@ header .menu-icon {
     width: 50%;
 }
 
+.left .description .btn:hover {
+    background-color: #fff;
+    border: #f15d51 1px solid;
+    color: #f15d51;
+}
+
 /* =======RIGHT========== */
 .right {
     flex: 1;
