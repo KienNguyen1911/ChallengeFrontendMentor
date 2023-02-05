@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+body {
+    /* background-color: #000; */
+    /* color: #fff; */
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 60px;
+    padding: 0 60px;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    font-weight: regular;
+    font-size: 16px;
+    color: #88868b;
+    padding: 6px 8px;
+}
+
+.navbar a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+header .menu-icon {
+    display: none;
+}
+
+.hero {
+    display: flex;
+    gap: 20px;
+}
+
+.hero .left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .left img {
+    width: 100%;
+}
+
+.left .content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.left .content .title {
+    flex: 1;
+    font-weight: 700;
+    color: #000;
+    margin: 0px;
+}
+
+.left .content .title h2 {
+    font-size: 40px;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+.left .description {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #88868b;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left .description p {
+    margin: 0px;
+}
+
+.left .description .btn {
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f15d51;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    width: 50%;
+}
+
+/* =======RIGHT========== */
+.right {
+    flex: 1;
+    background-color: #00001a;
+    color: #fff;
+}
+
+.right .list-article {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+
+.right .tag h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #e0a94e;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.right .article:not(:last-child) {
+    border-bottom: 1px solid #88868b;
+}
+
+.right .article {
+    padding: 0px 0px 10px 0px;
+}
+
+.right .article h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.right .article h3:hover {
+    color: #e0a94e;
+}
+
+.right .article p {
+    color: #88868b;
+    font-size: 14px;
+}
+
+/* RANKING */
+section {
+    margin-bottom: 60px;
+}
+
+.ranking {}
+
+.ranking .list-card {
+    display: flex;
+    gap: 20px;
+}
+
+.ranking .list-card .card {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.list-card .card .card-img img {
+    width: 100px;
+}
+
+.list-card .card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-card .card-description h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 30px;
+    color: #88868b;
+}
+
+.list-card .card-description h3 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    color: #000;
+}
+
+.list-card .card-description p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    color: #88868b;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .active {
+        display: block !important;
+    }
+    
+    .none {
+        display: none;
+    }
+    .wrapper {
+        margin: 0 14px;
+        padding: 0px;
+    }
+
+    header .navigation {
+        display: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 0px 1000px rgb(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        animation:  0.5s ease-in-out 0s 1 identifier;
+    }
+
+    .navigation .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .navigation .navbar a {
+        font-size: 24px;
+        color: #000;
+        padding-left: 20px;
+    }
+
+    header .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #88868b;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero .content {
+        flex-direction: column;
+    }
+
+    .left .description p {
+        padding: 0 0 20px 0;
+    }
+
+    .left {
+        margin-bottom: 60px;
+    }
+
+    .ranking .list-card {
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        border: none;
+        background: #fff;
+        cursor: pointer;
+        outline: none;
+        z-index: 999;
+    }
+
+    .ranking .list-card .card {
+        justify-content: flex-start;
+    }
+
+    @keyframes identifier {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+        
+    @keyframes identifier2 {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+}

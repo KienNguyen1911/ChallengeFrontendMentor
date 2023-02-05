@@ -1,0 +1,99 @@
+<header>
+    <div class="logo">
+        <img src="./assets/images/logo.svg" alt="logo" />
+    </div>
+    <div class="group-nav">
+        <div class="navigation">
+            <nav class="navbar">
+                <a class="nav-item" href="">Home</a>
+                <a class="nav-item" href="">New</a>
+                <a class="nav-item" href="">Popular</a>
+                <a class="nav-item" href="">Trending</a>
+                <a class="nav-item" href="">Categories</a>
+            </nav>
+        </div>
+        <button class="menu-icon">
+            <img src="./assets/images/icon-menu.svg" alt="menu-icon" />
+        </button>
+    </div>
+</header>
+
+<style>
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 100px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        font-weight: 700;
+        color: hsl(228, 45%, 44%);
+    }
+
+    @media (max-width: 768px) {
+        .group-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* position: relative; */
+        }
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .navigation {
+            display: none;
+            height: 100vh;
+            background-color: #b70000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            height: 100%;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbar = document.querySelector('.navigation');
+
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+</script>
